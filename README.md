@@ -98,8 +98,6 @@ Camera Feed
 
 ---
 
----
-
 ## 🛠 Installation
 
 ### Clone Repository
