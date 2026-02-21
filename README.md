@@ -1,17 +1,17 @@
-AI Workplace PPE Compliance System
-Overview
+##AI Workplace PPE Compliance System
+#Overview
 
 SafetyEye is an end-to-end AI-powered real-time workplace monitoring system designed to track occupancy levels and detect PPE (Personal Protective Equipment) compliance violations using computer vision.
 
 The system integrates deep learning-based object detection, rule-based violation logic, alert mechanisms, and an interactive analytics dashboard.
 
-Problem Statement
+#Problem Statement
 
 In industrial and construction environments, lack of safety compliance (helmets, vests, masks) leads to severe workplace risks. Manual supervision is inefficient and inconsistent.
 
 This system automates safety monitoring through AI-driven real-time surveillance analysis.
 
-System Architecture
+#System Architecture
 
 The system consists of four core components:
 
@@ -23,7 +23,7 @@ Real-Time Detection & Violation Logic
 
 Dashboard & Analytics Interface
 
-Model Training
+#Model Training
 
 Dataset:
 Construction Site Safety Image Dataset (Roboflow – Kaggle)
