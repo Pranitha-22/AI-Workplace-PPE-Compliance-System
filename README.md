@@ -1,112 +1,42 @@
-##AI Workplace PPE Compliance System
+AI Workplace PPE Compliance System (SafetyEye)
 
-#Overview
+AI-powered real-time monitoring system for detecting PPE violations and tracking workplace occupancy using YOLOv8.
 
-SafetyEye is an end-to-end AI-powered real-time workplace monitoring system designed to track occupancy levels and detect PPE (Personal Protective Equipment) compliance violations using computer vision.
+🚀 Core Features
 
-The system integrates deep learning-based object detection, rule-based violation logic, alert mechanisms, and an interactive analytics dashboard.
+Custom YOLOv8 model trained on construction safety dataset
 
-#Problem Statement
+Real-time multi-camera detection
 
-In industrial and construction environments, lack of safety compliance (helmets, vests, masks) leads to severe workplace risks. Manual supervision is inefficient and inconsistent.
+PPE detection: Helmet, Vest, Mask
 
-This system automates safety monitoring through AI-driven real-time surveillance analysis.
+Rule-based violation engine
 
-#System Architecture
+Risk classification (Low / Medium / High)
 
-The system consists of four core components:
+Alert generation & logging
 
-Data Pipeline
+Live dashboard with compliance analytics
 
-Model Training Engine
+Occupancy trend visualization
 
-Real-Time Detection & Violation Logic
+🧠 Architecture
 
-Dashboard & Analytics Interface
+Camera Feed → Frame Processing → YOLOv8 Inference →
+Violation Logic → Alert System → Database Logging →
+Live Dashboard (Analytics + Compliance Stats)
 
-#Model Training
+📊 Model
 
-Dataset:
-Construction Site Safety Image Dataset (Roboflow – Kaggle)
+Model: YOLOv8 (Ultralytics)
 
-Model:
-YOLOv8 (Ultralytics)
+Dataset: Construction Site Safety Dataset (Roboflow – Kaggle)
 
-Training Steps:
+Metrics: mAP, Precision, Recall (include your numbers here)
 
-Preprocessed YOLO-formatted dataset
+Data augmentation applied for robustness
 
-Data augmentation for robustness
-
-Train/Validation/Test split
-
-Hyperparameter tuning
-
-Evaluation via mAP, Precision, Recall
-
-Evaluation Metrics:
-
-mAP@0.5
-
-Precision
-
-Recall
-
-F1-score
-
-Real-Time Detection Pipeline
-
-Camera Input (Webcam / CCTV Feed)
-
-Frame Extraction
-
-YOLOv8 Inference
-
-Bounding Box & Label Rendering
-
-Violation Rule Engine (Missing Helmet / Vest / Mask)
-
-Alert Generation
-
-Logging to Database
-
-Dashboard Update
-
-Violation Logic
-
-Example rule:
-
-If detected class == "Person" AND no overlapping bounding box of "Helmet"
-→ Mark violation: "NO HARDHAT"
-→ Assign risk level
-→ Log violation
-→ Trigger alert
-
-Violation states:
-
-Detected
-
-Confirmed
-
-Escalated
-
-Dashboard Features
-
-Live camera feed with detection overlays
-
-Real-time occupancy tracking
-
-Active violation table
-
-PPE compliance percentage chart
-
-Occupancy trend graph
-
-Alert notification system
-
-Downloadable reports
-
-Tech Stack
+⚙️ Tech Stack
 
 Backend:
 
@@ -124,55 +54,59 @@ Frontend:
 
 React.js
 
-Chart.js / Recharts
+Chart Visualizations
 
-Data & Storage:
+Storage:
 
-CSV / SQLite / JSON logs
+SQLite / CSV logging
 
-Installation
+🔍 Violation Logic Example
 
-Clone repository:
+If:
 
-git clone https://github.com/yourusername/AI-Workplace-PPE-Compliance-System.git
+Person detected
 
-Install dependencies:
+No overlapping helmet detection
 
+→ Generate violation: NO HARDHAT
+→ Assign risk level
+→ Log event
+→ Trigger alert
+
+📈 Dashboard Includes
+
+Live detection feed
+
+Active violation table
+
+PPE compliance percentage
+
+Occupancy tracking
+
+Alert history
+
+🎥 Demo
+
+Full walkthrough:
+[YouTube Demo Link]
+
+▶️ Run Locally
 pip install -r requirements.txt
-
-Run backend:
-
 python backend/app.py
 
-Run frontend:
+Frontend:
 
 cd frontend
 npm install
 npm start
-Key Engineering Highlights
+🎯 Engineering Highlights
 
-Custom YOLOv8 training pipeline
+End-to-end model training pipeline
 
-Real-time multi-camera inference
+Real-time inference optimization
 
-Rule-based safety violation engine
-
-Risk scoring logic
-
-Compliance percentage analytics
-
-Structured logging system
+Custom violation rule engine
 
 Full-stack integration
 
-Future Improvements
-
-Deploy using Docker
-
-Integrate cloud model serving
-
-Multi-site monitoring support
-
-Automated email escalation
-
-Edge device deployment
+Scalable monitoring architecture
