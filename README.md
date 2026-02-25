@@ -51,7 +51,7 @@ Camera Feed
 
 ## 🗂 Dataset
 
-- Source: https://www.kaggle.com/datasets/snehilsanyal/construction-site-safety-image-dataset-roboflow  
+- Source: https://www.kaggle.com/datasets/construction-site-safety-image-dataset-roboflow  
 - Classes:
   - Helmet  
   - Mask  
